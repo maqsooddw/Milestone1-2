@@ -1,0 +1,183 @@
+body{
+    background-color: gray;
+    color: whitesmoke;}
+   
+
+.resumebody{
+    background-color: white;
+    height: 545px;
+    width: 700px;
+    padding: 10px;
+    align-items: center;
+    border: 2px solid white;
+    border-radius: 10px;
+    margin: 0 auto;
+    position: relative;
+
+    color: blue;
+font-size: 20px;
+
+    font-family: "Beau Rivage", cursive;
+    font-weight: 40;
+    font-style: normal;
+    font-size: 30px;
+    text-justify: distribute-all-lines;
+    line-height: 50px;
+    letter-spacing: 0px; 
+}
+
+.innerbody{
+        background-color: blue;
+        height: 85px;
+        width: 700px;
+        padding: 10px;
+        align-items: center;
+        border: 2px solid white;    
+        border-radius: 10px;
+        border-bottom: 10px solid gray;
+        border-bottom-left-radius: 80px;
+        margin: 0 auto;
+        position: relative; 
+        left: -12px;
+        top: -14px;
+     
+        color: blue;
+    font-size: 20px;
+    
+        font-family: "Beau Rivage", cursive;
+        font-weight: 40;
+        font-style: normal;
+        font-size: 30px;
+        text-justify: distribute-all-lines;
+        line-height: 50px;
+        letter-spacing: 0px; 
+    }
+
+    .circel-image{
+        height: 85px;
+        width: 85px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .contentheader{
+        margin: 0 auto;
+        color: black;
+        font-weight: 40000;
+        font-size: 35px;
+        position: relative; 
+        right: -200px;
+        top: -115px;
+        text-decoration: underline;
+        text-decoration-color: black;
+
+    }
+
+    .headercontant{
+        margin: 0 auto;
+        color: black;
+        font-weight: 40;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 10px;
+        position: relative; 
+        right: -200px;
+        top: -115px;
+        text-decoration: underline;
+        text-decoration-color: black;
+
+    }
+#name{      
+    margin: 0 auto;
+    color: black;
+    font-weight: 100;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 12px;
+    position: relative; 
+    right: -20px;
+    top: -25px;
+    text-decoration: none;
+}
+#address{     
+    margin: 0 auto;
+    color: black;
+    font-weight: 100;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 9px;
+    position: relative; 
+    right: -20px;
+    top: -60px;
+    text-decoration: none;
+    text-decoration: blue;
+}
+#cellnumber{     
+    margin: 0 auto;
+    color: black;
+    font-weight: 100;
+    text-decoration: none;
+    text-decoration: blue;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 9px;
+    position: relative; 
+    right: -20px;
+    top: -96px;
+}
+#email{   
+    margin: 0 auto;
+    color: black;
+    font-weight: 100;
+    text-decoration: none;
+    text-decoration: blue;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 9px;
+    position: relative; 
+    right: -20px;
+    top: -131px;
+}
+
+
+#myText{
+font-family: 'Times New Roman', Times, serif;
+font-size: 14px;
+
+
+}
+
+.objective{
+    margin: 0 auto;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14px;
+    line-height: 14px;
+    text-align: justify;
+    color: black;
+
+}
+
+h2{
+    font-family: "Sonsie One", system-ui;
+  font-weight: -4px;
+  font-style: normal;
+  font-size: 10px;
+  text-align:center;
+  color:black;
+  text-decoration:underline;
+  text-decoration-color: whitesmoke;
+  letter-spacing: 2px;
+}
+
+#pd{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 10px;
+    line-height: 4px;
+}
+
+#pdheading{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: underline;
+    line-height: 4px;
+}
+#li{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 4px;
+}
