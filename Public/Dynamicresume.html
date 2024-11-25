@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Resume</title>
+     <!-- link a css file -->
+     <link rel="stylesheet" href="/hakthon/Milestone1-2/Style/style.css">
+<!-- linked google font -->
+<link href="https://fonts.googleapis.com/css2?family=Beau+Rivage&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Sonsie+One&display=swap" rel="stylesheet">
+</head>
+<body>
+       
+<div id="Heading">  Max-Dw Interactive Resume Builder    </div>
+<!--end heading div  -->
+   
+<div id="button">
+    <a href="/hakthon/Milestone1-2/index.html"> <button id="chbutton"> Home </button></a>
+               
+     <!-- <button id="chbutton1" onclick="TogHeading()">Change Heading</button> -->
+          
+    <a href="/hakthon/Milestone1-2/Public/Staticresume.html"> <button id="chbutton"> Static Resume </button></a>
+    
+    <a href="/hakthon/Milestone1-2/Public/Dynamicresume.html"> <button id="chbutton"> Dynamic Resume </button> </a>
+    
+    <a href="/hakthon/Milestone1-2/Public/Editableresume.html">  <button id="chbutton"> Editable Resume </button>  </a>
+    
+    <a href="/hakthon/Milestone1-2/Public/Shareable.html">  <button id="chbutton"> Shareable Resume </button>  </a>
+    
+    <a href="/hakthon/Milestone1-2/Public/About.html"> <button id="chbutton"> About </button>   </a>
+                
+    </div>
+        <!-- end button div end button div -->
+
+
+    <!-- dynamic resume builder coding -->
+    <h2 id="abc">Dynamic Resume Builder</h2>
+
+    <form id="resume-form">
+        <fieldset>
+            <legend>Basic Information</legend>
+            <label for="name">Full Name:</label>
+            <input type="text" id="nameF" class="input-field" required placeholder="Enter Name Here"><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="emailF" class="input-field" required placeholder="Enter Email Here"><br>
+
+            <label for="contact">Contact No:</label>
+            <input type="number" id="contactF" class="input-field" required placeholder="Enter Contact No. Here"><br>
+
+            <label for="city">City:</label>
+            <input type="text" id="cityF" class="input-field" required placeholder="Enter City Name Here"><br>
+
+            <label for="state">State:</label>
+            <input type="text" id="stateF" class="input-field" required placeholder="Enter State Name Here"><br>
+
+            <label for="objectiveF"> Objective :</label>
+            <textarea id="objectiveF" class="input-field" placeholder="Enter Objective Here">To utilize my potential and skills in a progressive & challenging environment. Interested to join establishment wherein I have an opportunity to demonstrate my best potential approach and abilities in the field of customer services, sales, Marketing and recovery or any suitable job.</textarea>
+        </fieldset>
+
+        <fieldset>
+            <legend>Skills</legend>
+            <div id="skills-container"></div>
+            <button type="button" onclick="addSkill()">Add Skill</button>
+        </fieldset>
+
+        <fieldset>
+
+            <legend>Experience</legend>
+            <div id="exp"> Do you have any experience ? <input type="checkbox" onclick="showExperienceForm(true)"> </div>
+
+            <!-- <label for="">Do you have any experience ?</label>
+          
+            <div class="button-container">
+                <button type="button" onclick="showExperienceForm(true)">Yes</button>
+                <button type="button" onclick="showExperienceForm(false)">No</button>
+            </div> -->
+            
+            <div id="experience-container" style="display: none;"></div>
+            
+            <div id="fresh-graduate-message" style="display: none; margin-top: 10px;">
+                <p>Exciting! As a fresh candidate, I am ready to embark on a professional journey with enthusiasm and a strong skill set!</p>
+            </div>
+            <div id="addexp"> 
+                <button type="button" id="add-experience-btn">Add More Experience</button>
+            </div>
+            </fieldset>
+
+
+
+    <fieldset>
+<legend> Picture </legend>
+<!-- Profile Picture Field Start -->
+<label>Upload Picture:</label>
+<input type="file" id="profile-picture" accept="image/*" onchange="displaySelectedImage(event)" required><br>
+<img id="image-preview" style="display: block; max-width: 150px; max-height: 150px; margin-top: 10px;">
+<!-- Profile Picture Field End -->
+
+    </fieldset>
+    
+        <fieldset>
+            <legend>Education</legend>
+            <div id="education-container"></div>
+            <button type="button" onclick="addEducationEntry()">Add Education</button>
+        </fieldset>
+
+        <button type="submit" onclick="hideshow()">Generate Code</button>
+    </form>
+
+    <!-- <div id="generated-code"></div>
+    <div id="resume-output"></div> -->
+
+
+<!-- static resume tempelete -->
+
+<div id="dynamicall">
+
+
+<div class="ResumeBody">
+    <!-- Top Section -->
+    <div class="topSection">
+            <!-- Image and Name Section -->
+<div class="imgfullname">
+  <img
+    id="image"
+    src="/hakthon/Milestone1-2/Assets/Images/bmama.png"
+    alt="Profile Picture"
+    width="150"
+    height="150"
+  />
+  <h1 id="fullname">Maqsood Ahmed</h1>
+</div>
+<!-- End Image and Name Section -->
+
+      <!-- Details Section (State, City, Contact, Email) -->
+      <div id="details">
+        <div class="location">
+          <p id="State">Sindh,</p>
+          <p id="City">Karachi</p>
+        </div>
+        <p id="contactno">03468204153</p>
+        <p id="email">maqsoodahmeddw@gmail.com</p>
+      </div>
+      <!-- End Details Section -->
+    </div>
+    <!-- End Top Section -->
+
+    <!-- Left and Right Section -->
+    <div id="leftrightsection">
+      <div id="leftSection">
+        <div id="works">
+        <h3>Work Experience</h3>
+        <!-- work1 -->
+        <div id="Work1">
+          <p id="Jobtitle1">Recovery Officer</p>
+          <div class="company-info">
+            <p id="company1">Allied Rental Services Limited</p>
+            <p class="date-range">
+              <span id="yearfrom1">October-2016</span> -
+              <span id="yearto1">October-2024</span>
+            </p>
+          </div>
+          <p id="joblocation1">Karachi, Pakistan</p>
+          <p id="description1">
+            Managed customer recoveries and improved asset recovery rates by
+            20% over two years.
+          </p>
+        </div>
+        <!-- work2 -->
+        <div id="Work2">
+          <p id="Jobtitle2">Recovery Officer</p>
+          <div class="company-info">
+            <p id="company2">Bank Alfalah</p>
+            <p class="date-range">
+              <span id="yearfrom2">October-2008</span> -
+              <span id="yearto2">October-2016</span>
+            </p>
+          </div>
+          <p id="joblocation2">Karachi, Pakistan</p>
+          <p id="description2">
+            Managed customer recoveries and improved asset recovery rates by
+            20% over two years.
+          </p>
+        </div>
+      </div>
+<!-- END WORK EXPERINCE  -->
+
+<!-- EDUCATIONAL INFORMATION  -->
+<div id="edu"></div>
+        
+
+        <!-- end educagtional infrmation  -->
+
+<!-- toggele button for hid and show scrills -->
+
+        <!-- <button id="chbutton1" onclick="Showhideskills()"> Toggel -->
+      </div>
+      
+      <!-- End Left Section -->
+
+      <div id="rightSection">
+        <h3>Objective</h3>
+        <p id="ObjectiveA">
+          To utilize my potential and skills in a progressive & challenging
+          environment. Interested to join establishment wherein I have an
+          opportunity to demonstrate my best potential approach and abilities
+          in the field of customer services, sales, Marketing and recovery or
+          any suitable job.
+        </p>
+        <div id="skillsA">
+        <h3>Skills</h3>
+        <ul>
+          <li id="skills1">Collection strategies</li>
+           <li id="skills2">   Bankruptcy knowledge</li>
+            <li id="skills3">  Loan restructuring</li>
+              <li id="skills4">Asset recovery</li>
+     
+        </ul>
+        
+      </div>
+      <!-- end skills div -->
+     
+              </div>
+    
+   
+  
+      <!-- End Right Section -->
+    </div>
+    <!-- End Left and Right Section -->
+  </div>
+  <!-- End Resume Body -->
+
+
+<!-- End Static resume temelete -->
+    
+  </div>
+
+<script src="../../Milestone1-2/Script/script.js"></script> 
+</body>
+</html>
